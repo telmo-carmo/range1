@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 
     ts::span<int> sp1(a); 
     auto process_range_part = [](ts::span<const int> s_part) {
-        std::cout << "Processing part: ";
+        std::cout << "Processing SPAN part: ";
         for (int val : s_part) {
             std::cout << val << " ";
         }
