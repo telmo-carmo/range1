@@ -1,6 +1,7 @@
 {
   "dependencies": [
     "range-v3",
-    "tcb-span"
+    "tcb-span",
+    "fmt"
   ]
 }

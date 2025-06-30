@@ -16,6 +16,8 @@
     #include <array>
     namespace ts = std; 
 
+    #include <format>
+    namespace fmt = std; 
 #else
     // C++17: Use range-v3
     #include <range/v3/all.hpp>
@@ -27,4 +29,7 @@
 
     #include <tcb/span.hpp> // tcb::span for C++17
     namespace ts = tcb; // Use tcb::span as a replacement for std::
+
+    #include <fmt/core.h> 
+    namespace fmt = fmt; // Use fmt for formatting
 #endif
