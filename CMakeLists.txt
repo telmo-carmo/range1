@@ -9,10 +9,10 @@ add_executable(${PROJECT_NAME} src/range1.cpp src/my_range.hpp)
 
 # Detect C++20 or higher
 if(CMAKE_CXX_STANDARD GREATER_EQUAL 20)
-    message(STATUS "Using C++20 or newer (${CMAKE_CXX_STANDARD})— will use std::format span and ranges")
+    message(STATUS "Using C++20 or newer (ver: ${CMAKE_CXX_STANDARD})— will use std::format span and ranges")
     set(USE_STD_FORMAT TRUE)
 else()
-    message(STATUS "Using C++17 — will use fmt::format")
+    message(STATUS "Using C++17 — will use fmt::format range-v3 and tcb::span")
     find_package(range-v3 CONFIG REQUIRED)
     find_package(fmt REQUIRED)
     find_path(TCB_SPAN_INCLUDE_DIRS "tcb/span.hpp")
