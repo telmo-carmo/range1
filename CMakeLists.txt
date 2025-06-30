@@ -4,7 +4,7 @@ project(range1 CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
+message(STATUS "Using C++ version: ${CMAKE_CXX_STANDARD}")
 
 add_executable(${PROJECT_NAME} src/range1.cpp src/my_range.hpp)
 
