@@ -12,6 +12,10 @@
     namespace rg = std::ranges;
     namespace vw = std::ranges::views;
 
+    #include <span> 
+    #include <array>
+    namespace ts = std; 
+
 #else
     // C++17: Use range-v3
     #include <range/v3/all.hpp>
@@ -21,5 +25,6 @@
     namespace rg = ranges::v3;
     namespace vw = ranges::v3::views;
 
-
+    #include <tcb/span.hpp> // tcb::span for C++17
+    namespace ts = tcb; // Use tcb::span as a replacement for std::
 #endif

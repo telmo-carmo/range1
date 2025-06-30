@@ -19,6 +19,16 @@ int main(int argc, char* argv[]) {
         std::cout << idx++ << " = " << x << '\n';
     }
 
+    ts::span<int> sp1(a); 
+    auto process_range_part = [](ts::span<const int> s_part) {
+        std::cout << "Processing part: ";
+        for (int val : s_part) {
+            std::cout << val << " ";
+        }
+        std::cout << "\n";
+    };
+
+    process_range_part(sp1.subspan(0, 4)); 
 
     return 0;
 }
