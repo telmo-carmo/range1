@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     auto v2 = a | rg::views::filter(even) | rg::views::transform(square);
     int idx = 0;
     for (int x : v2 ) {
-        std::cout <<  fmt::format("idx {} = {}\n", idx++,x);
+        std::cout <<  tfmt::format("idx {} = {}\n", idx++,x);
     }
 
     ts::span<int> sp1(a); 
